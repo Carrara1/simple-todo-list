@@ -1,0 +1,240 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #161414;
+    color: #b9a5a2;
+    max-width: 400px;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+
+  .new-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  
+  .btn {
+      background-color: #ffffff;
+      border: 1px solid transparent;
+      border-radius: .75rem;
+      box-sizing: border-box;
+      color: #000000;
+      cursor: pointer;
+      flex: 0 0 auto;
+      font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+      padding: .75rem 1.2rem;
+      text-align: center;
+      text-decoration: none #ffffff solid;
+      text-decoration-thickness: auto;
+      
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: auto;
+    }
+    
+    .button-40:focus {
+      box-shadow: none;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+    
+    @media (min-width: 768px) {
+      .button-40 {
+        padding: .75rem 1.5rem;
+      }
+    }
+
+  
+  
+  .btn:hover,
+  .btn:focus-visible {
+    background: hsl(200, 100%, 50%, 0.2);
+  }
+  
+  .btn.btn-danger {
+      background: #FF4742;
+      border: 1px solid #FF4742;
+      border-radius: 6px;
+      box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 16px;
+      min-height: 40px;
+      outline: 0;
+      padding: 12px 14px;
+      text-align: center;
+      text-rendering: geometricprecision;
+      text-transform: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+    }
+    
+    .button-24:hover,
+    .button-24:active {
+      background-color: initial;
+      background-position: 0 0;
+      color: #FF4742;
+    }
+    
+    .button-24:active {
+      opacity: .5;
+    }
+  
+  
+  .btn.btn-danger:hover,
+  .btn.btn-danger:focus-visible {
+    background: hsl(0, 100%, 40%, 0.2);
+  }
+  
+  .new-item-form input {
+      align-items: center;
+      background-image: linear-gradient(144deg,#3221cb, #5B42F3 50%,#00DDEB);
+      border: 0;
+      border-radius: 8px;
+      box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      display: flex;
+      font-family: Phantomsans, sans-serif;
+      font-size: 20px;
+      justify-content: center;
+      line-height: 1em;
+      max-width: 100%;
+      min-width: 140px;
+      padding: 3px;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    
+    .button-64:active,
+    .button-64:hover {
+      outline: 0;
+    }
+    
+    .button-64 span {
+      background-color: rgb(5, 6, 45);
+      padding: 16px 24px;
+      border-radius: 6px;
+      width: 100%;
+      height: 100%;
+      transition: 300ms;
+    }
+    
+    .button-64:hover span {
+      background: none;
+    }
+    
+    @media (min-width: 768px) {
+      .button-64 {
+        font-size: 24px;
+        min-width: 196px;
+      }
+    }
+  
+  
+  .new-item-form input:focus {
+    border: 1px solid hsl(0, 92%, 46%);
+  }
+  
+  .header {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .list {
+    margin: 0;
+    padding: 0;
+    margin-left: 1rem;
+    list-style: none;
+  }
+  
+  .list li:has(input:checked) label {
+    color: hsl(9, 81%, 42%);
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .list li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .list li label {
+    display: flex;
+    gap: 0.25rem;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .list li:has(input:focus-visible) label {
+    outline: 1px solid hsl(200, 100%, 50%);
+  }
+  
+  .list li input {
+    outline: none;
+    width: 0;
+    height: 0;
+    appearance: none;
+    pointer-events: none;
+    position: absolute;
+  }
+  
+  .list li label::before {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: hsl(200, 100%, 90%);
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .list li label:hover::before {
+    background: hsl(200, 100%, 80%);
+  }
+  
+  .list li:has(input:checked) label::before {
+    content: "✔";
+    background: hsl(200, 100%, 40%);
+    color: hsl(200, 100%, 90%);
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  
+  .list li:has(input:checked) label:hover::before {
+    background: hsl(200, 100%, 30%);
+  }
